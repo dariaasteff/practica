@@ -36,7 +36,7 @@ st.title("Analiza semnalului Muston - cu Butterworth și Export Excel")
 uploaded_file = st.file_uploader("Incarca fisierul CSV", type=["csv"])
 
 if uploaded_file is not None:
-    content = uploaded_file.read().decode('utf-8')
+    content = uploaded_file.read().decode('latin1')
     lines = content.split('\n')
 
     # Extract sample period T from lines 0-6
